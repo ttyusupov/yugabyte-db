@@ -4,13 +4,15 @@ headerTitle: TPC-C
 linkTitle: TPC-C
 description: Benchmark YSQL performance using TPC-C
 headcontent: Benchmark YugabyteDB using TPC-C
+image: /images/section_icons/quick_start/explore_ysql.png
+aliases:
+  - /benchmark/tpcc
+  - /benchmark/tpcc-ysql
 menu:
   latest:
     identifier: tpcc-ysql
     parent: benchmark
     weight: 4
-aliases:
-  - /benchmark/tpcc/
 showAsideToc: true
 isTocNested: true
 ---
@@ -53,44 +55,35 @@ You will need the IP addresses of the nodes in the cluster for the next step.
 {{< /tip>}}
 
 
-### Step 2. TPC-C Load Phase
+<ul class="nav nav-tabs nav-tabs-yb">
+  <li >
+    <a href="#10-wh" class="nav-link active" id="10-wh-tab" data-toggle="tab" role="tab" aria-controls="10-wh" aria-selected="true">
+      10
+    </a>
+  </li>
+  <li>
+    <a href="#100-wh" class="nav-link" id="100-wh-tab" data-toggle="tab" role="tab" aria-controls="100-wh" aria-selected="false">
+      100
+    </a>
+  </li>
+  <li>
+    <a href="#1000-wh" class="nav-link" id="docker-tab" data-toggle="tab" role="tab" aria-controls="docker" aria-selected="false">
+      1000
+    </a>
+  </li>
+</ul>
 
-Before starting the workload, you will need to load the data first. Make sure
-to replace the IP addresses with that of the nodes in the cluster.
-
-
-```sh
-$ ./tpccbenchmark --create=true --load=true \
-  --nodes=127.0.0.1,127.0.0.2,127.0.0.3 \
-  --warehouses=100 \
-  --loaderthreads=48
-```
-
-{{< note title="Note" >}}
-The default values for `nodes` is `127.0.0.1`, `warehouses` is `10` and
-`loaderthreads` is `10`.
-{{< /note >}}
-
-### Step 3. TPC-C Execute Phase
-
-You can then run the workload against the database as follows:
-
-```sh
-$ ./tpccbenchmark --execute=true \
-  --nodes=127.0.0.1,127.0.0.2,127.0.0.3 \
-  --warehouses=100  \
-  -o outputfile
-```
-
-{{< tip title="Tip" >}}
-You can also load and run the benchmark in a single step:
-```sh
-$ ./tpccbenchmark --create=true --load=true --execute=true \
-  --nodes=127.0.0.1,127.0.0.2,127.0.0.3 \
-  --warehouses=100 \
-  -o outputfile
-```
-{{< /tip>}}
+<div class="tab-content">
+  <div id="10-wh" class="tab-pane fade show active" role="tabpanel" aria-labelledby="10-wh-tab">
+    {{% includeMarkdown "10-wh/tpcc-ysql.md" /%}}
+  </div>
+  <div id="100-wh" class="tab-pane fade" role="tabpanel" aria-labelledby="100-wh-tab">
+    {{% includeMarkdown "100-wh/tpcc-ysql.md" /%}}
+  </div>
+  <div id="1000-wh" class="tab-pane fade" role="tabpanel" aria-labelledby="1000-wh-tab">
+    {{% includeMarkdown "1000-wh/tpcc-ysql.md" /%}}
+  </div>
+</div>
 
 ## TPC-C Benchmark Results
 
