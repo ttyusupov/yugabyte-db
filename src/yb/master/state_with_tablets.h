@@ -27,7 +27,7 @@
 #include "yb/master/catalog_entity_info.pb.h"
 
 #include "yb/util/monotime.h"
-#include "yb/util/status_fwd.h"
+#include "yb/util/status.h"
 #include "yb/util/tostring.h"
 
 namespace yb::master {

@@ -18,11 +18,10 @@
 #include "yb/rpc/rpc_fwd.h"
 
 #include "yb/util/net/net_fwd.h"
-#include "yb/util/status_fwd.h"
+#include "yb/util/status.h"
+#include "yb/util/logging.h"
 
 namespace yb {
-
-class Status;
 
 namespace rpc {
 

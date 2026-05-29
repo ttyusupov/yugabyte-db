@@ -20,7 +20,7 @@
 #include "yb/common/entity_ids_types.h"
 #include "yb/gutil/thread_annotations.h"
 #include "yb/util/monotime.h"
-#include "yb/util/status_fwd.h"
+#include "yb/util/status.h"
 
 namespace yb::xrepl {
 struct StreamTabletStats {

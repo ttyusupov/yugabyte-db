@@ -19,7 +19,7 @@
 
 #include "yb/consensus/consensus_types.pb.h"
 
-#include "yb/util/status_fwd.h"
+#include "yb/util/status.h"
 
 namespace yb {
 namespace tablet {

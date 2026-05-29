@@ -17,7 +17,7 @@
 
 #include "yb/dockv/dockv_fwd.h"
 
-#include "yb/util/status_fwd.h"
+#include "yb/util/status.h"
 
 namespace yb::dockv {
 

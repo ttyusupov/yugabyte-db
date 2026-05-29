@@ -12,6 +12,8 @@
 //
 #pragma once
 
+#include <string>
+
 #include "yb/util/status_fwd.h"
 
 namespace yb {
