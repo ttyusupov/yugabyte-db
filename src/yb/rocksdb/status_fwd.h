@@ -18,7 +18,7 @@
 
 #pragma once
 
-#include "yb/util/status_fwd.h"
+#include "something_else.h"
 
 namespace rocksdb {
 
