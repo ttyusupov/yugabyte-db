@@ -19,6 +19,7 @@
 #include "yb/gen_yrpc/model.h"
 
 #include "yb/gutil/stl_util.h"
+#include "yb/util/format.h"
 
 using google::protobuf::internal::WireFormatLite;
 using namespace std::literals;
