@@ -22,6 +22,6 @@
 
 namespace rocksdb {
 
-typedef yb::Status Status;
+using Status = yb::Status;
 
 }  // namespace rocksdb
