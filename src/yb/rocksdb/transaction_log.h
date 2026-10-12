@@ -20,7 +20,7 @@
 
 #pragma once
 
-#include "yb/rocksdb/status.h"
+#include "yb/rocksdb/status_fwd.h"
 #include "yb/rocksdb/types.h"
 #include "yb/rocksdb/write_batch.h"
 #include <memory>
